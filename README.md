@@ -1,173 +1,196 @@
-# Image-Handling-and-Pixel-Transformations-Using-OpenCV 
+## Image-Processing-Using-OpenCV
 
-## AIM:
-Write a Python program using OpenCV that performs the following tasks:
+## 🎯 AIM
+To develop a Python program using OpenCV to perform image processing operations such as reading, displaying, brightness adjustment, contrast modification, and pixel transformations.
 
-1) Read and Display an Image.  
-2) Adjust the brightness of an image.  
-3) Modify the image contrast.  
-4) Generate a third image using bitwise operations.
+---
 
-## Software Required:
-- Anaconda - Python 3.7
-- Jupyter Notebook (for interactive development and execution)
+## 💻 Software Requirements
+- Anaconda (Python 3.7)  
+- Jupyter Notebook  
+- OpenCV Library  
+- NumPy Library  
+- Matplotlib Library  
 
-## Algorithm:
+---
+
+## 🧠 Introduction
+Image processing is a method of performing operations on an image to enhance it or extract useful information from it. It is widely used in various fields such as computer vision, artificial intelligence, medical imaging, satellite imaging, and robotics.
+
+OpenCV (Open Source Computer Vision Library) is a powerful library used for image processing and computer vision tasks. It provides a wide range of functions for handling images efficiently.
+
+---
+
+## 📌 Objectives
+- To understand the basics of image processing  
+- To learn how to read and display images using OpenCV  
+- To analyze image properties such as dimensions and channels  
+- To perform image transformations like cropping, resizing, and flipping  
+- To adjust brightness and contrast of images  
+- To explore color channel manipulation (RGB and HSV)  
+- To understand pixel-level operations  
+
+---
+
+## 📖 Theory
+
+### 🔹 What is an Image?
+An image is a collection of pixels arranged in a grid format. Each pixel represents the smallest unit of an image and contains intensity or color information.
+
+---
+
+### 🔹 Types of Images
+- **Grayscale Image:** Contains only intensity values (black and white)  
+- **Color Image:** Contains three channels (Red, Green, Blue)  
+
+---
+
+### 🔹 Pixel Transformation
+Pixel transformation refers to modifying pixel values to improve image quality or extract meaningful information.
+
+---
+
+### 🔹 Brightness Adjustment
+Brightness refers to the overall lightness or darkness of an image. It can be adjusted by adding or subtracting a constant value to pixel intensities.
+
+---
+
+### 🔹 Contrast Adjustment
+Contrast defines the difference between the darkest and brightest regions of an image. Increasing contrast enhances visibility of details.
+
+---
+
+### 🔹 Image Cropping
+Cropping removes unwanted portions of an image and focuses on a specific region of interest.
+
+---
+
+### 🔹 Image Resizing
+Resizing changes the dimensions of an image. It is useful for scaling images for different applications.
+
+---
+
+### 🔹 Image Flipping
+Flipping changes the orientation of the image either horizontally or vertically.
+
+---
+
+### 🔹 Color Channels
+A color image is made up of three channels:
+- Red (R)  
+- Green (G)  
+- Blue (B)  
+
+Each channel represents intensity of that color.
+
+---
+
+### 🔹 HSV Color Model
+HSV stands for:
+- Hue (color type)  
+- Saturation (color intensity)  
+- Value (brightness)  
+
+It is useful for advanced image processing tasks.
+
+---
+
+## ⚙️ Algorithm
+
 ### Step 1:
-Load an image from your local directory and display it.
+Load an image from the local system and display it.
 
 ### Step 2:
-Create a matrix of ones (with data type float64) to adjust brightness.
+Analyze the image dimensions and channels.
 
 ### Step 3:
-Create brighter and darker images by adding and subtracting the matrix from the original image.  
-Display the original, brighter, and darker images.
+Convert and display the image in different formats.
 
 ### Step 4:
-Modify the image contrast by creating two higher contrast images using scaling factors of 1.1 and 1.2 (without overflow fix).  
-Display the original, lower contrast, and higher contrast images.
+Save the processed image and reload it.
 
 ### Step 5:
-Split the image (boy.jpg) into B, G, R components and display the channels
+Perform cropping to isolate specific objects.
 
-## Program Developed By:
-- **Name:** [Your Name Here]  
-- **Register Number:** [Your Register Number Here]
+### Step 6:
+Resize the image to a larger scale.
 
-  ### Ex. No. 01
+### Step 7:
+Apply flipping transformations.
 
-#### 1. Read the image ('Eagle_in_Flight.jpg') using OpenCV imread() as a grayscale image.
-```python
-# YOUR CODE HERE
-```
+### Step 8:
+Enhance images by adding text and shapes.
 
-#### 2. Print the image width, height & Channel.
-```python
-# YOUR CODE HERE
-```
+### Step 9:
+Adjust brightness using matrix operations.
 
-#### 3. Display the image using matplotlib imshow().
-```python
-# YOUR CODE HERE
-```
+### Step 10:
+Create brighter and darker versions of the image.
 
-#### 4. Save the image as a PNG file using OpenCV imwrite().
-```python
-# YOUR CODE HERE
-```
+### Step 11:
+Modify contrast using scaling factors.
 
-#### 5. Read the saved image above as a color image using cv2.cvtColor().
-```python
-# YOUR CODE HERE
-```
+### Step 12:
+Split the image into RGB channels and display them.
 
-#### 6. Display the Colour image using matplotlib imshow() & Print the image width, height & channel.
-```python
-# YOUR CODE HERE
-```
+### Step 13:
+Merge the RGB channels to reconstruct the image.
 
-#### 7. Crop the image to extract any specific (Eagle alone) object from the image.
-```python
-# YOUR CODE HERE
-```
+### Step 14:
+Convert the image into HSV format and split channels.
 
-#### 8. Resize the image up by a factor of 2x.
-```python
-# YOUR CODE HERE
-```
+### Step 15:
+Merge HSV channels and display the final output.
 
-#### 9. Flip the cropped/resized image horizontally.
-```python
-# YOUR CODE HERE
-```
+---
 
-#### 10. Read in the image ('Apollo-11-launch.jpg').
-```python
-# YOUR CODE HERE
-```
+## 📊 Output
+- Image successfully loaded and displayed  
+- Brightness adjustment applied  
+- Contrast modification performed  
+- Image transformations (crop, resize, flip) executed  
+- RGB and HSV channels visualized  
+- Enhanced images generated  
 
-#### 11. Add the following text to the dark area at the bottom of the image (centered on the image):
-```python
-text = 'Apollo 11 Saturn V Launch, July 16, 1969'
-font_face = cv2.FONT_HERSHEY_PLAIN
-# YOUR CODE HERE: use putText()
-```
+---
 
-#### 12. Draw a magenta rectangle that encompasses the launch tower and the rocket.
-```python
-rect_color = magenta
-# YOUR CODE HERE
-```
+## 🌟 Advantages
+- Simple and efficient image processing  
+- Easy implementation using OpenCV  
+- Useful for real-time applications  
+- Improves image quality and clarity  
 
-#### 13. Display the final annotated image.
-```python
-# YOUR CODE HERE
-```
+---
 
-#### 14. Read the image ('Boy.jpg').
-```python
-# YOUR CODE HERE
-```
+## 🌍 Applications
+- Face recognition systems  
+- Medical image analysis  
+- Satellite image processing  
+- Autonomous vehicles  
+- Security and surveillance systems  
+- Image enhancement tools  
 
-#### 15. Adjust the brightness of the image.
-```python
-# Create a matrix of ones (with data type float64)
-# matrix_ones = 
-# YOUR CODE HERE
-```
+---
 
-#### 16. Create brighter and darker images.
-```python
-img_brighter = cv2.add(img, matrix)
-img_darker = cv2.subtract(img, matrix)
-# YOUR CODE HERE
-```
+## 👨‍💻 Developed By
+**Name:** Harini S
+**Register Number:** 212223240048
 
-#### 17. Display the images (Original Image, Darker Image, Brighter Image).
-```python
-# YOUR CODE HERE
-```
+---
 
-#### 18. Modify the image contrast.
-```python
-# Create two higher contrast images using the 'scale' option with factors of 1.1 and 1.2 (without overflow fix)
-matrix1 = 
-matrix2 = 
-# img_higher1 = 
-# img_higher2 = 
-# YOUR CODE HERE
-```
+## 📌 Result
+Thus, the experiment was successfully completed using Python and OpenCV. Various image processing techniques such as reading, displaying, brightness and contrast adjustment, and pixel transformations were performed effectively.
 
-#### 19. Display the images (Original, Lower Contrast, Higher Contrast).
-```python
-# YOUR CODE HERE
-```
+---
 
-#### 20. Split the image (boy.jpg) into the B,G,R components & Display the channels.
-```python
-# YOUR CODE HERE
-```
+## 📘 Conclusion
+This experiment provides a strong understanding of basic image processing concepts. It helps in developing skills required for advanced applications in computer vision and artificial intelligence. The use of OpenCV makes it easier to implement complex image operations efficiently.
 
-#### 21. Merged the R, G, B , displays along with the original image
-```python
-# YOUR CODE HERE
-```
+---
 
-#### 22. Split the image into the H, S, V components & Display the channels.
-```python
-# YOUR CODE HERE
-```
-#### 23. Merged the H, S, V, displays along with original image.
-```python
-# YOUR CODE HERE
-```
-
-## Output:
-- **i)** Read and Display an Image.  
-- **ii)** Adjust Image Brightness.  
-- **iii)** Modify Image Contrast.  
-- **iv)** Generate Third Image Using Bitwise Operations.
-
-## Result:
-Thus, the images were read, displayed, brightness and contrast adjustments were made, and bitwise operations were performed successfully using the Python program.
-
+## 🔮 Future Scope
+- Implementation of advanced filters  
+- Object detection and recognition  
+- Real-time video processing  
+- Integration with AI models  
+- Image classification and segmentation  
